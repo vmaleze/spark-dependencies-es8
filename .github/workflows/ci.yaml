@@ -22,8 +22,8 @@ jobs:
       - name: test
         run: ./mvnw clean test
 
-  latest-jaeger-es7:
-    name: Latest Jaeger and ES7
+  latest-jaeger-es8:
+    name: Latest Jaeger and ES8
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v2
@@ -37,4 +37,4 @@ jobs:
       - name: compile
         run: ./mvnw clean install -DskipTests
       - name: test
-        run: ELASTICSEARCH_VERSION=7.3.0 ./mvnw clean test -pl jaeger-spark-dependencies-elasticsearch
+        run: ELASTICSEARCH_VERSION=8.6.2 ./mvnw clean test -pl jaeger-spark-dependencies-elasticsearch
